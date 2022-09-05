@@ -1,5 +1,193 @@
+//variables in less
 @ul: none;
+@a-none: none;
 
-ul{
+*{
+   font-family: 'Times New Roman', Times, serif;
+   padding: 0;
+   margin: 0;
+}
+
+@width: 100%;
+
+.sports-bike-nav ul{
     list-style-type: @ul;
+    
+}
+
+//mixins in less
+.border{
+    border: solid 1px black;
+}
+
+/*.sports-bike-nav{
+    .border();
+    width: @width;
+    float: left;
+    display: flex;
+}
+
+*/
+//nesting in less 
+
+.sports-bike-nav{
+    .border();
+    z-index: 1;
+    position: fixed;
+    height: 100px;
+    line-height: 100px;
+    width: @width;
+    float: left;
+    display: flex;
+    background: linear-gradient(to right, #111, rgb(231, 188, 188));
+    box-shadow: 0px 0px 10px black;
+    
+        li{
+            display: inline;
+            padding-left: 20px;
+        }
+
+        a{
+            text-decoration: @a-none;    
+            color: rgb(44, 40, 40);
+            font-weight: 900;
+        }
+
+        #sports{
+            padding-left: 10px;
+            color: rgb(220, 236, 220);
+        }
+
+        #bike{
+            color: rgb(172, 216, 172);
+        }
+
+}
+
+//main 
+.sports-bike-main{
+    .background-image-main{
+        position: absolute;
+        #image-bike{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%; 
+            width: 100%;
+            margin-top: 100px;
+        }
+        
+    }
+    .text{
+        position: absolute;
+        margin-left: calc(100% - 180px);
+        margin-top: 180px;
+        font-size: 2rem;
+        color: rgb(109, 50, 4);
+    }
+
+    #order{
+        span{
+            position: absolute;
+            width: @width;
+            background-color: white;
+            margin-left: 20px ;
+            margin-top: 280px;
+            font-size: 1rem;
+            color: rgb(109, 50, 4);
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+        }
+        a{
+            text-decoration: @a-none;
+            color: rgb(109, 50, 4);
+        }
+    }
+
+    #hand-pointer{
+        .bi.bi-hand-index-thumb-fill{
+            position: fixed;
+            margin-top: 290px;
+            margin-left: 50px;
+            color: rgb(207, 146, 32);
+            font-size: 1.5rem;
+            animation: animateHands 2s infinite;
+            transition: all 2s ease-in-out;
+            position: absolute;
+        }
+    }
+}
+
+@keyframes animateHands {
+    40%, 60%{
+        top: 10px;
+        font-size: 1.7rem;
+    }
+}
+@background-position: "center";
+@background-size: "cover";
+@background-repeat: "no-repeat";
+
+.bikes{
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    margin-top: 331px;
+    width: @width;
+    position: absolute;
+    line-height: 15px;
+    .row{
+        ul{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            list-style-type: @ul;
+        }
+       img{
+            padding-right: 10px;
+            padding-left: 20px;
+            height: 80%;
+            width: 80%; 
+       }
+       i{
+            font-size: 1.5rem;
+            color: goldenrod;
+       }
+
+       h1{
+        text-align: center;
+        margin-top: 20px;
+       }
+       p{
+        padding-left: 10px;
+        padding-right: 10px;
+       }
+    }
+
+    .contacts{
+        height: 150px;
+        background-color: black;
+        text-align: center;
+        h1{
+            margin-top: 20px;
+            line-height: 50px;
+            color: purple;
+        }
+        ul{
+            list-style-type: @ul;
+        }
+        li{
+            display: inline-flex;
+            line-height: 50px;
+            padding: 0px 20px;
+            i{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    
 }

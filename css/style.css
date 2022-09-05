@@ -1,3 +1,152 @@
-ul {
+* {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0;
+  margin: 0;
+}
+.sports-bike-nav ul {
   list-style-type: none;
+}
+.border {
+  border: solid 1px black;
+}
+/*.sports-bike-nav{
+    .border();
+    width: @width;
+    float: left;
+    display: flex;
+}
+
+*/
+.sports-bike-nav {
+  border: solid 1px black;
+  z-index: 1;
+  position: fixed;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  float: left;
+  display: flex;
+  background: linear-gradient(to right, #111, #e7bcbc);
+  box-shadow: 0px 0px 10px black;
+}
+.sports-bike-nav li {
+  display: inline;
+  padding-left: 20px;
+}
+.sports-bike-nav a {
+  text-decoration: none;
+  color: #2c2828;
+  font-weight: 900;
+}
+.sports-bike-nav #sports {
+  padding-left: 10px;
+  color: #dcecdc;
+}
+.sports-bike-nav #bike {
+  color: #acd8ac;
+}
+.sports-bike-main .background-image-main {
+  position: absolute;
+}
+.sports-bike-main .background-image-main #image-bike {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+.sports-bike-main .text {
+  position: absolute;
+  margin-left: calc(100% - 180px);
+  margin-top: 180px;
+  font-size: 2rem;
+  color: #6d3204;
+}
+.sports-bike-main #order span {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  margin-left: 20px ;
+  margin-top: 280px;
+  font-size: 1rem;
+  color: #6d3204;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+.sports-bike-main #order a {
+  text-decoration: none;
+  color: #6d3204;
+}
+.sports-bike-main #hand-pointer .bi.bi-hand-index-thumb-fill {
+  position: fixed;
+  margin-top: 290px;
+  margin-left: 50px;
+  color: #cf9220;
+  font-size: 1.5rem;
+  animation: animateHands 2s infinite;
+  transition: all 2s ease-in-out;
+  position: absolute;
+}
+@keyframes animateHands {
+  40%,
+  60% {
+    top: 10px;
+    font-size: 1.7rem;
+  }
+}
+.bikes {
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  margin-top: 331px;
+  width: 100%;
+  position: absolute;
+  line-height: 15px;
+}
+.bikes .row ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  list-style-type: none;
+}
+.bikes .row img {
+  padding-right: 10px;
+  padding-left: 20px;
+  height: 80%;
+  width: 80%;
+}
+.bikes .row i {
+  font-size: 1.5rem;
+  color: goldenrod;
+}
+.bikes .row h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+.bikes .row p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.bikes .contacts {
+  height: 150px;
+  background-color: black;
+  text-align: center;
+}
+.bikes .contacts h1 {
+  margin-top: 20px;
+  line-height: 50px;
+  color: purple;
+}
+.bikes .contacts ul {
+  list-style-type: none;
+}
+.bikes .contacts li {
+  display: inline-flex;
+  line-height: 50px;
+  padding: 0px 20px;
+}
+.bikes .contacts li i {
+  font-size: 25px;
 }
